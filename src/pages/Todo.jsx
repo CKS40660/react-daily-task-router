@@ -1,5 +1,12 @@
+import Logout from "./logout";
+
 function Todo() {
-  return <h2>這是 Todo</h2>;
+  return (
+    <div>
+      <h2>這是 Todo</h2>
+      <Logout />
+    </div>
+  );
 }
 
 export default Todo;
