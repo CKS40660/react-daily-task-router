@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Todo from "./pages/Todo";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Post from "./pages/Post";
+import PostId from "./pages/PostID";
 
 // const Todo = () => {
 //   return <p>這是 Todo 頁面</p>;
@@ -32,10 +34,16 @@ function App() {
           <NavLink to="/todo">
             <p>Todo 頁面</p>
           </NavLink>
+          <NavLink to="/post">
+            <p>Post 頁面</p>
+          </NavLink>
         </div>
         {/* Routes, Route 練習區 */}
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/post" element={<Post />}>
+            <Route path=":postId" element={<PostId></PostId>}></Route>
+          </Route>
           <Route path="/todo" element={<Todo />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
